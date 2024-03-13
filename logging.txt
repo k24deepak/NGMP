@@ -1,0 +1,622 @@
+Request method:	GET
+Request URI:	https://staging.parivahan.gov.in/vahancapi-common/api/validateregandchasino/UP32LH3629/13213/UP/6
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	regn_no=UP32LH3629
+				chasi_no=13213
+				stateCd=UP
+				pur_cd=6
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+X-Frame-Options: SAMEORIGIN
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 13 Mar 2024 05:14:04 GMT
+Server: Application
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload;
+X-XSS-Protection: 1; mode=block
+Content-Security-Policy: upgrade-insecure-requests
+X-Content-Type-Options: nosniff
+Set-Cookie: SERVERID_vahanservice_155=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+Cache-control: private
+Set-Cookie: SERVERID_7080_local=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+
+{
+    "state_cd": "UP",
+    "state_name": "Uttar Pradesh",
+    "off_cd": 32,
+    "c_off_cd": null,
+    "off_name": null,
+    "regn_no": "UP32LH3629",
+    "regn_dt": null,
+    "regn_dtAsDate": null,
+    "fit_uptoAsDate": null,
+    "purchase_dt": null,
+    "purchase_date": null,
+    "owner_sr": null,
+    "owner_name": null,
+    "f_name": null,
+    "c_add1": null,
+    "c_add2": null,
+    "c_add3": null,
+    "c_district": null,
+    "c_district_name": null,
+    "c_state": "UP",
+    "c_state_name": null,
+    "c_pincode": 213213,
+    "p_add1": null,
+    "p_add2": null,
+    "p_add3": null,
+    "p_district": null,
+    "p_district_name": null,
+    "p_state": null,
+    "p_state_name": null,
+    "p_pincode": null,
+    "owner_cd": null,
+    "owner_cd_descr": null,
+    "regn_type": null,
+    "regn_type_descr": null,
+    "vh_class": null,
+    "vh_class_desc": null,
+    "chasi_no": "DSAD21Q3213213213",
+    "eng_no": null,
+    "eng_no_original": null,
+    "maker": null,
+    "maker_name": null,
+    "model_cd": null,
+    "model_name": null,
+    "body_type": null,
+    "no_cyl": null,
+    "hp": null,
+    "seat_cap": null,
+    "stand_cap": null,
+    "sleeper_cap": null,
+    "unld_wt": null,
+    "ld_wt": null,
+    "gcw": null,
+    "fuel": null,
+    "fuel_descr": null,
+    "color": null,
+    "manu_mon": null,
+    "manu_yr": null,
+    "norms": null,
+    "norms_descr": null,
+    "wheelbase": null,
+    "cubic_cap": null,
+    "floor_area": null,
+    "ac_fitted": null,
+    "audio_fitted": null,
+    "video_fitted": null,
+    "vch_purchase_as": null,
+    "vch_catg": null,
+    "vch_catg_desc": null,
+    "dealer_cd": null,
+    "dlr_name": null,
+    "dlr_add1": null,
+    "dlr_add2": null,
+    "dlr_add3": null,
+    "dlr_city": null,
+    "dlr_district": null,
+    "dlr_pincode": null,
+    "sale_amt": null,
+    "laser_code": null,
+    "garage_add": null,
+    "length": null,
+    "width": null,
+    "height": null,
+    "regn_upto": null,
+    "regn_uptoAsDate": null,
+    "fit_upto": null,
+    "fit_upto_desc": null,
+    "annual_income": null,
+    "op_dt": null,
+    "imported_vch": null,
+    "other_criteria": null,
+    "status": null,
+    "vehType": null,
+    "vehTypeAsInt": 0,
+    "vch_purchase_asCode": null,
+    "tax_mode": null,
+    "permit_rto_cd": null,
+    "transport_catg": null,
+    "chasi_no_original": null,
+    "eng_no_orignal": null,
+    "formatRegn_dt": null,
+    "numberOfTyres": null,
+    "no_of_axles": null,
+    "appl_no": null,
+    "mobile_no": null,
+    "email_id": null,
+    "pan_no": null,
+    "aadhar_no": null,
+    "passport_no": null,
+    "ration_card_no": null,
+    "voter_id": null,
+    "dl_no": null,
+    "verified_on": null,
+    "flag": null,
+    "mobileNoEditable": null,
+    "ownerCatg": null,
+    "dlRequired": null,
+    "dlValidationRequired": null,
+    "conditionstatus": false,
+    "permitDetailEntity": null,
+    "vtInsuranceCommonDto": null,
+    "vtpucc": null,
+    "permitDetailDto": null,
+    "latesttaxdetails": null,
+    "vTHypthEntity": null,
+    "ownerIdentification": null,
+    "owner_ctg": null,
+    "dept_cd": null,
+    "returnMessge": null
+}
+Request method:	GET
+Request URI:	https://staging.parivahan.gov.in/vahancapi-masterconfig/masterConfig/getstate_cdOffcd/UP32LH3629
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	regn_no=UP32LH3629
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+X-Frame-Options: SAMEORIGIN
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 13 Mar 2024 05:14:05 GMT
+Server: Application
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload;
+X-XSS-Protection: 1; mode=block
+Content-Security-Policy: upgrade-insecure-requests
+X-Content-Type-Options: nosniff
+Set-Cookie: SERVERID_vahanservice_155=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+Cache-control: private
+Set-Cookie: SERVERID_7080_local=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+
+{
+    "stateCd": "UP",
+    "offCd": 32
+}
+Request method:	GET
+Request URI:	https://staging.parivahan.gov.in/vahancapi-common/api/getownerDetailsInurancePuccPermit/UP32LH3629/UP/13213
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	regn_no=UP32LH3629
+				stateCd=UP
+				chasi_no=13213
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+X-Frame-Options: SAMEORIGIN
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 13 Mar 2024 05:14:05 GMT
+Server: Application
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload;
+X-XSS-Protection: 1; mode=block
+Content-Security-Policy: upgrade-insecure-requests
+X-Content-Type-Options: nosniff
+Set-Cookie: SERVERID_vahanservice_155=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+Cache-control: private
+Set-Cookie: SERVERID_7080_local=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+
+{
+    "data": {
+        "state_cd": "UP",
+        "state_name": "Uttar Pradesh",
+        "off_cd": 32,
+        "c_off_cd": null,
+        "off_name": "LUCKNOW RTO ",
+        "regn_no": "UP32LH3629",
+        "regn_dt": "2023-05-10",
+        "regn_dtAsDate": null,
+        "fit_uptoAsDate": null,
+        "purchase_dt": "2023-05-08",
+        "purchase_date": null,
+        "owner_sr": 1,
+        "owner_name": "DR.MOHAMMED ANWAR",
+        "f_name": "ASDSADASD",
+        "c_add1": "ASDSAD",
+        "c_add2": "ASDASD",
+        "c_add3": "",
+        "c_district": 157,
+        "c_district_name": "Lucknow",
+        "c_state": "UP",
+        "c_state_name": "Uttar Pradesh",
+        "c_pincode": 213213,
+        "p_add1": "ASDSAD",
+        "p_add2": "ASDASD",
+        "p_add3": "",
+        "p_district": 157,
+        "p_district_name": "Lucknow",
+        "p_state": "UP",
+        "p_state_name": "Uttar Pradesh",
+        "p_pincode": 213213,
+        "owner_cd": 1,
+        "owner_cd_descr": "INDIVIDUAL",
+        "regn_type": "S",
+        "regn_type_descr": "NEW REGN AGAINST SCRAPPED VEHICLE ",
+        "vh_class": 7,
+        "vh_class_desc": "Motor Car",
+        "chasi_no": "DSAD21Q3213213213",
+        "eng_no": "32423",
+        "eng_no_original": null,
+        "maker": 27,
+        "maker_name": "Gauri Auto India Pvt. Ltd",
+        "model_cd": "GARUD1",
+        "model_name": "GARUD 3 WHEELER (3 SEATER)",
+        "body_type": "OPEN",
+        "no_cyl": 1,
+        "hp": 8.05,
+        "seat_cap": 4,
+        "stand_cap": 0,
+        "sleeper_cap": 0,
+        "unld_wt": 425,
+        "ld_wt": 731,
+        "gcw": 0,
+        "fuel": 2,
+        "fuel_descr": "DIESEL",
+        "color": "ASDASD",
+        "manu_mon": 2,
+        "manu_yr": 2023,
+        "norms": 15,
+        "norms_descr": "BHARAT STAGE VI",
+        "wheelbase": 2025,
+        "cubic_cap": 435.6,
+        "floor_area": 0.0,
+        "ac_fitted": "N",
+        "audio_fitted": "N",
+        "video_fitted": "N",
+        "vch_purchase_as": "B",
+        "vch_catg": "LMV",
+        "vch_catg_desc": null,
+        "dealer_cd": "UP1904180000193",
+        "dlr_name": "SUDHANSHU",
+        "dlr_add1": "C-3125",
+        "dlr_add2": "RJPM",
+        "dlr_add3": "",
+        "dlr_city": "",
+        "dlr_district": "157",
+        "dlr_pincode": "226017",
+        "sale_amt": 124000000,
+        "laser_code": "",
+        "garage_add": "",
+        "length": 3030,
+        "width": 1530,
+        "height": 1830,
+        "regn_upto": "2038-05-09",
+        "regn_uptoAsDate": null,
+        "fit_upto": "2038-05-09",
+        "fit_upto_desc": null,
+        "annual_income": 0,
+        "op_dt": "2023-05-10 13:30:39.379482",
+        "imported_vch": "N",
+        "other_criteria": 0,
+        "status": "Y",
+        "vehType": "Non-Transport",
+        "vehTypeAsInt": 2,
+        "vch_purchase_asCode": null,
+        "tax_mode": "L",
+        "permit_rto_cd": null,
+        "transport_catg": null,
+        "chasi_no_original": null,
+        "eng_no_orignal": null,
+        "formatRegn_dt": null,
+        "numberOfTyres": null,
+        "no_of_axles": null,
+        "appl_no": null,
+        "mobile_no": 9997666735,
+        "email_id": "tyagi@gmail.com",
+        "pan_no": "BXXPT5676H",
+        "aadhar_no": "",
+        "passport_no": "",
+        "ration_card_no": "",
+        "voter_id": "",
+        "dl_no": "",
+        "verified_on": 1683705639379,
+        "flag": null,
+        "mobileNoEditable": null,
+        "ownerCatg": null,
+        "dlRequired": null,
+        "dlValidationRequired": null,
+        "conditionstatus": false,
+        "permitDetailEntity": null,
+        "vtInsuranceCommonDto": {
+            "regn_no": null,
+            "comp_cd": null,
+            "ins_type": null,
+            "ins_from": null,
+            "ins_upto": null,
+            "policy_no": null,
+            "idv": 0,
+            "op_dt": null,
+            "ic_code": null,
+            "descr": null,
+            "descr1": null,
+            "instyp_code": null,
+            "insuranceMessge": null,
+            "moved_by": null,
+            "insFrom": "2023-05-04",
+            "insUpto": "2025-05-03",
+            "moved_on": null,
+            "appl_no": null,
+            "insuranceType": 0,
+            "issuerCd": 1032,
+            "issuerName": "NA",
+            "instypeName": null,
+            "opdt": "2023-05-10 13:30:39.379482",
+            "policyNo": "DSFSDFDSF",
+            "vahanVerify": "false",
+            "regnNo": "UP32LH3629",
+            "insuranceFrom": null,
+            "insuranceUpto": null
+        },
+        "vtpucc": null,
+        "permitDetailDto": null,
+        "latesttaxdetails": {
+            "regn_no": "UP32LH3629",
+            "tax_mode": "L",
+            "payment_mode": "C",
+            "tax_amt": 6510000,
+            "tax_fine": 0,
+            "rcpt_dt": "10-05-2023",
+            "tax_from": "2023-05-08",
+            "tax_upto": null,
+            "flag": null,
+            "collected_by": "100009",
+            "vtTaxEntityByid": {
+                "state_cd": "UP",
+                "off_cd": 32,
+                "rcpt_no": "UP32R23050000008",
+                "pur_cd": 58
+            }
+        },
+        "vTHypthEntity": null,
+        "ownerIdentification": {
+            "appl_no": null,
+            "regn_no": null,
+            "mobile_no": 9997666735,
+            "email_id": "tyagi@gmail.com",
+            "pan_no": "BXXPT5676H",
+            "aadhar_no": "",
+            "passport_no": "",
+            "ration_card_no": "",
+            "voter_id": "",
+            "dl_no": "",
+            "verified_on": 1683705639379,
+            "flag": false,
+            "mobileNoEditable": false,
+            "ownerCatg": 0,
+            "dlRequired": false,
+            "dlValidationRequired": false,
+            "state_cd": null
+        },
+        "owner_ctg": 7,
+        "dept_cd": 0,
+        "returnMessge": null
+    },
+    "apiMessage": {
+        "message": "msg.success",
+        "developerMessage": "success",
+        "statusCode": 200,
+        "messageParam": null
+    }
+}
+Request method:	GET
+Request URI:	https://staging.parivahan.gov.in/vahancapi-masterconfig/masterConfig/fillvmonlineservicechecksdata/UP
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	stateCd=UP
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+X-Frame-Options: SAMEORIGIN
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 13 Mar 2024 05:14:05 GMT
+Server: Application
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload;
+X-XSS-Protection: 1; mode=block
+Content-Security-Policy: upgrade-insecure-requests
+X-Content-Type-Options: nosniff
+Set-Cookie: SERVERID_vahanservice_155=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+Cache-control: private
+Set-Cookie: SERVERID_7080_local=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+
+{
+    "state_cd": "UP",
+    "allowservice_insuranceinvalid": "13,58,59,61,62,63,65,68,69,409,366",
+    "allowservice_fitnessinvalid": "13,58,59,61,62,63,65,68,69,409,366,15",
+    "allowservice_rcvalidinvalid": "13,58,59,61,62,63,65,68,69,409,366,15",
+    "allowservice_taxinvalid": "13,58,59,62,63,65,68,69,409,366,15",
+    "allowservice_whenblacklist": "<58,(0)>&<346,(0)>&<508,(0)>",
+    "ownercdinsuranceexempt": "4,5,6,11,15,16",
+    "isncrbblacklist": "true",
+    "challanpndingrestrictpur_cd": "950,5,9,11,14,15,16,17,61,66",
+    "taxrestrictedsaleamt": false,
+    "mobile_no_checkduration": 0,
+    "mobile_no_checklimit": 0,
+    "service_stop": null,
+    "service_resume": 1618560000000,
+    "service_alert_message": null,
+    "rrwithtax": false,
+    "service_auth_mode": "<A,(0)>&<M,(0)>&<BM,(950,995,996,5)",
+    "fee_exempt_owner_cd": "",
+    "hptcheck_skip_pur_cd": ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,104,110,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+    "mvtax_notpermittedpurcd": null,
+    "zero_vtfee_pur_cd": "",
+    "any_where_rto_district_mapping": null,
+    "hsrp_mandatory": false,
+    "fitnessskipcheck": "15,2,58,346,508,61,366,581",
+    "taxskipcondition": "58,581,346,508,366",
+    "govvehiclecheck": "4,5,6,15,16,11",
+    "servicecombination": "<5,(4,6,7,15>&<3,(6,7,8,4)>&<16>&<4,(3,7)>",
+    "permitpurcondtion": "39,981,36,35,27,26",
+    "service_allowed_with_pending_appl": "<58,(0)>&<2,(0)>&<(15,7),(25,26,27)>&<366,(58,2)>",
+    "tax_nid_days": 0,
+    "taxMsgSkipModes": ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,O,L,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+    "allow_rc_services": null,
+    "ltttaxbacklogentry": false,
+    "othertaxservicesallow": null,
+    "randomofficeallotmentpurcd": ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+    "restricttowithouttax": false,
+    "allowfitnesshomertoif38a": false,
+    "rto_pincode_check_to": false,
+    "ishptdetailsfrombank": false,
+    "hpaentrybyfinancier": false,
+    "check_tax_exemption": true,
+    "hptentrybyfinancier": false,
+    "taxbasedonlease": false,
+    "servicenotallowbyaadhar": null,
+    "allowtaxforvehcls": ""
+}
+Request method:	POST
+Request URI:	https://staging.parivahan.gov.in/vahancapi-common/api/generateOtp
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "aadharNo": "xxxxxx9994",
+    "aadharType": "M",
+    "chasiNo": "DSAD21Q3213213213",
+    "eKYC": "No",
+    "mobileNo": "8825987874",
+    "otpGenerated": "True",
+    "purCd": [
+        "6"
+    ],
+    "regNo": "UP32LH3629",
+    "stateCd": "UP"
+}
+HTTP/1.1 200 
+X-Frame-Options: SAMEORIGIN
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 13 Mar 2024 05:14:05 GMT
+Server: Application
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload;
+X-XSS-Protection: 1; mode=block
+Content-Security-Policy: upgrade-insecure-requests
+X-Content-Type-Options: nosniff
+Set-Cookie: SERVERID_vahanservice_155=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+Set-Cookie: SERVERID_7080_local=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+
+{
+    "data": {
+        "aadharNo": "xxxxxx9994",
+        "regNo": "UP32LH3629",
+        "purCd": [
+            "6"
+        ],
+        "mobileNo": "8825987874",
+        "userId": null,
+        "ipaddress": null,
+        "otp": "2736",
+        "lastFourMobileNumber": null,
+        "otpGenerated": true,
+        "eKYC": "No",
+        "stateCd": "UP",
+        "aadharType": "M",
+        "txNo": null,
+        "dOAadhaarResponse": null,
+        "chasiNo": "DSAD21Q3213213213"
+    },
+    "apiMessage": {
+        "message": "success",
+        "developerMessage": "OTP :2736 successfuly sent on your  mobile No  XXXXXX:7874",
+        "statusCode": 200,
+        "messageParam": null
+    }
+}
+Request method:	POST
+Request URI:	https://staging.parivahan.gov.in/vahancapi-common/api/verifyOtp
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "aadharNo": "xxxxxx9994",
+    "aadharType": "M",
+    "chasiNo": "DSAD21Q3213213213",
+    "eKYC": "No",
+    "ipaddress": "",
+    "mobileNo": "8825987874",
+    "otp": "2736",
+    "otpGenerated": true,
+    "purCd": [
+        "6"
+    ],
+    "regNo": "UP32LH3629",
+    "stateCd": "UP",
+    "txNo": "string",
+    "userId": "string"
+}
+HTTP/1.1 200 
+X-Frame-Options: SAMEORIGIN
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 13 Mar 2024 05:14:05 GMT
+Server: Application
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload;
+X-XSS-Protection: 1; mode=block
+Content-Security-Policy: upgrade-insecure-requests
+X-Content-Type-Options: nosniff
+Set-Cookie: SERVERID_vahanservice_155=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+Set-Cookie: SERVERID_7080_local=; Expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/
+
+{
+    "data": {
+        "aadharNo": "xxxxxx9994",
+        "regNo": "UP32LH3629",
+        "purCd": [
+            "6"
+        ],
+        "mobileNo": "8825987874",
+        "userId": "string",
+        "ipaddress": "",
+        "otp": "2736",
+        "lastFourMobileNumber": null,
+        "otpGenerated": true,
+        "eKYC": "No",
+        "stateCd": "UP",
+        "aadharType": "M",
+        "txNo": "string",
+        "dOAadhaarResponse": null,
+        "chasiNo": "DSAD21Q3213213213"
+    },
+    "apiMessage": {
+        "message": "success",
+        "developerMessage": "OTP verified successfully",
+        "statusCode": 200,
+        "messageParam": null
+    }
+}
