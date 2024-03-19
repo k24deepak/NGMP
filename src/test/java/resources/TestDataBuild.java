@@ -3,7 +3,10 @@ package resources;
 import java.util.ArrayList;
 import java.util.List;
 
+import pojo.BeforePaymentHPA;
 import pojo.GenerateOTPPayload;
+import pojo.HPADraftAPPL;
+import pojo.hpaDto;
 
 public class TestDataBuild {
 
@@ -207,6 +210,45 @@ public class TestDataBuild {
 				+ "}";
 }
 	
+	public String Getpermitfeedetails(String applNo, String chasi_no , String pur_cd , String regn_no, String state_cd) {
+		return "{\r\n"
+				+ "  \"applNo\": \""+applNo+"\",\r\n"
+				+ "  \"certificateNo\": \"string\",\r\n"
+				+ "  \"chasiNo\": \""+chasi_no+"\",\r\n"
+				+ "  \"fromDate\": \"string\",\r\n"
+				+ "  \"isEkycTaken\": true,\r\n"
+				+ "  \"mobileNo\": \"string\",\r\n"
+				+ "  \"offCd\": 0,\r\n"
+				+ "  \"otp\": \"string\",\r\n"
+				+ "  \"period\": 0,\r\n"
+				+ "  \"periodMode\": \"string\",\r\n"
+				+ "  \"policyNo\": \"string\",\r\n"
+				+ "  \"purCd\": "+pur_cd+",\r\n"
+				+ "  \"purCds\": [\r\n"
+				+ "    27\r\n"
+				+ "  ],\r\n"
+				+ "  \"purCdsForFee\": [\r\n"
+				+ "    {\r\n"
+				+ "      \"purposeCode\": "+pur_cd+",\r\n"
+				+ "      \"upToDate\": \"2024-03-15T05:47:50.812Z\"\r\n"
+				+ "    }\r\n"
+				+ "  ],\r\n"
+				+ "  \"regnNo\": \""+regn_no+"\",\r\n"
+				+ "  \"roleId\": 0,\r\n"
+				+ "  \"skipValidations\": [\r\n"
+				+ "    \"string\"\r\n"
+				+ "  ],\r\n"
+				+ "  \"stateCd\": \""+state_cd+"\",\r\n"
+				+ "  \"taxMode\": \"string\",\r\n"
+				+ "  \"toDate\": \"string\",\r\n"
+				+ "  \"totalAmountPayble\": 0,\r\n"
+				+ "  \"transNo\": \"string\",\r\n"
+				+ "  \"type\": \"string\",\r\n"
+				+ "  \"userId\": 0,\r\n"
+				+ "  \"userType\": \"string\",\r\n"
+				+ "  \"vhClass\": 0\r\n"
+				+ "}";}
+		
 	public String duplicatePermitappl(String off_cd, String regn_no, String state_cd) {
 		return "{ \r\n"
 				+ "    \"applNo\": \"\", \r\n"
@@ -276,4 +318,158 @@ public class TestDataBuild {
 				+ "  }\r\n"
 				+ "}";
 }
+	
+	public HPADraftAPPL hpaDraft(String off_cd, String pur_cd, String regn_no, String state_cd) {
+		HPADraftAPPL h = new HPADraftAPPL();
+		h.setFncr_add1("ANAND");
+		h.setFncr_add2("ANAND");
+		h.setFncr_add3("ANAND");
+		h.setFncr_district(482);
+		h.setFncr_name("HDFC FINANCE LTD.");
+		h.setFncr_pincode(380021);
+		h.setFncr_state("MH");
+		h.setFrom_dt("2023-08-01");
+		h.setHp_type("H");
+		h.setOff_cd(off_cd);
+		h.setOp_dt("2023-08-18T04:47:54.994Z");
+		h.setPur_cd(pur_cd);
+		h.setRegn_no(regn_no);
+		h.setSr_no(1);
+		h.setState_cd(state_cd);
+		return h;
+	}
+	
+	public BeforePaymentHPA beforepaymentHPA(String appl_no, String FullChasi_no, String off_cd, String pur_cd, String regn_no, String state_cd) {
+		BeforePaymentHPA BP = new BeforePaymentHPA();
+		BP.setAadharauth("M");
+		BP.setAppl_no(appl_no);
+		BP.setApplication_status("true");
+		BP.setComp_cd("0");
+		BP.setOff_cd(off_cd);
+		BP.setPur_cd(pur_cd);
+		BP.setRegn_no(regn_no);
+		BP.setChasi_no(FullChasi_no);
+		BP.setState_cd(state_cd);
+		BP.setTax_mode("L");
+		hpaDto B = new hpaDto();
+		B.setAppl_no(appl_no);
+		B.setFncr_add1("ANAND");
+		B.setFncr_add2("ANAND");
+		B.setFncr_add3("ANAND");
+		B.setFncr_district(482);
+		B.setFncr_name("HDFC FINANCE LTD.");
+		B.setFncr_pincode(380021);
+		B.setFncr_state("MH");
+		B.setFrom_dt("2023-08-01");
+		B.setOff_cd(off_cd);
+		B.setOp_dt("2023-08-18T04:47:54.994Z");
+		B.setRegn_no(regn_no);
+		B.setSr_no(1);
+		B.setState_cd(state_cd);
+		BP.setHpaDto(B);
+		return BP;
+	}
+	
+	public String finalsubmitHPA(String applno, String off_cd, String recieptNo, String Fullchassisno, String regn_no, String state_cd) {
+		return"{\r\n"
+				+ "    \"aadhaartxno\": \"\",\r\n"
+				+ "    \"aadharauth\": \"M\",\r\n"
+				+ "    \"appl_no\": \""+applno+"\",\r\n"
+				+ "    \"application_status\": true,\r\n"
+				+ "    \"comp_cd\": 0,\r\n"
+				+ "    \"fir_dt\": \"2021-12-01\",\r\n"
+				+ "    \"fir_no\": \"FIR23PT\",\r\n"
+				+ "    \"idv\": 0,\r\n"
+				+ "    \"ins_from\": \"2021-12-01\",\r\n"
+				+ "    \"ins_type\": 1,\r\n"
+				+ "    \"ins_upto\": \"2026-11-30\",\r\n"
+				+ "    \"msg\": \"\",\r\n"
+				+ "    \"nofees\": false,\r\n"
+				+ "    \"off_cd\": "+off_cd+",\r\n"
+				+ "    \"op_dt\": \"2023-03-28T05:38:25.144Z\",\r\n"
+				+ "    \"police_station\": \"ANAND\",\r\n"
+				+ "    \"policy_no\": \"XYZDEMO1230987\",\r\n"
+				+ "    \"pur_cd\": 6,\r\n"
+				+ "    \"rcp_dt\": \"2023-03-28T05:38:25.144Z\",\r\n"
+				+ "    \"rcpt_NO\": \""+recieptNo+"\",\r\n"
+				+ "    \"rcpt_amt\": 0,\r\n"
+				+ "    \"reason\": 2,\r\n"
+				+ "    \"regn_no\": \""+regn_no+"\",\r\n"
+				+ "    \"chasi_no\":\""+Fullchassisno+"\",\r\n"
+				+ "    \"service_charge\": 0,\r\n"
+				+ "    \"state_cd\": \""+state_cd+"\",\r\n"
+				+ "    \"state_header\": \"\",\r\n"
+				+ "    \"status\": \"\",\r\n"
+				+ "    \"tax_mode\": \"L\",\r\n"
+				+ "    \"vh_class\": 0,\r\n"
+				+ " \r\n"
+				+ "  \"hpaDto\": {\r\n"
+				+ "    \"appl_no\": \""+applno+"\",\r\n"
+				+ "    \"fncr_add1\": \"ANAND\",\r\n"
+				+ "    \"fncr_add2\": \"ANAND\",\r\n"
+				+ "    \"fncr_add3\": \"ANAND\",\r\n"
+				+ "    \"fncr_district\": 482,\r\n"
+				+ "    \"fncr_name\": \"HDFC FINANCE LTD.\",\r\n"
+				+ "    \"fncr_pincode\": 380021,\r\n"
+				+ "    \"fncr_state\": \"MH\",\r\n"
+				+ "    \"from_dt\": \"2021-12-01\",\r\n"
+				+ "    \"off_cd\": 12,\r\n"
+				+ "    \"op_dt\": \"2023-05-31T04:09:51.917Z\",\r\n"
+				+ "    \"regn_no\": \""+regn_no+"\",\r\n"
+				+ "    \"sr_no\": 1,\r\n"
+				+ "    \"state_cd\": \""+state_cd+"\"\r\n"
+				+ "  }\r\n"
+				+ "}";
+	}
+	
+	public String finalsubmitDuplicatePermit(String applno, String off_cd, String chasi_no5, String regn_no, String state_cd) {
+		return"{\r\n"
+				+ "  \"aadhaartxno\": \"\",\r\n"
+				+ "  \"aadharauth\": \"A\",\r\n"
+				+ "  \"appl_no\": \""+applno+"\",\r\n"
+				+ "  \"application_status\": true,\r\n"
+				+ "  \"comp_cd\": 0,\r\n"
+				+ "  \"fir_dt\": \"2021-12-01\",\r\n"
+				+ "  \"fir_no\": \"FIR23PT\",\r\n"
+				+ "  \"idv\": 0,\r\n"
+				+ "  \"ins_from\": \"2021-12-01\",\r\n"
+				+ "  \"ins_type\": 1,\r\n"
+				+ "  \"ins_upto\": \"2026-11-30\",\r\n"
+				+ "  \"msg\": \"\",\r\n"
+				+ "  \"nofees\": false,\r\n"
+				+ "  \"off_cd\": "+off_cd+",\r\n"
+				+ "  \"op_dt\": \"2023-04-10T05:38:25.144Z\",\r\n"
+				+ "  \"police_station\": \"ANAND\",\r\n"
+				+ "  \"policy_no\": \"XYZDEMO1230987\",\r\n"
+				+ "  \"pur_cd\": 34,\r\n"
+				+ "  \"rcp_dt\": \"2023-04-10T05:38:25.144Z\",\r\n"
+				+ "  \"rcpt_NO\": \"\",\r\n"
+				+ "  \"rcpt_amt\": 0,\r\n"
+				+ "  \"reason\": 2,\r\n"
+				+ "  \"regn_no\": \""+regn_no+"\",\r\n"
+				+ "  \"chasi_no\":\""+chasi_no5+"\",\r\n"
+				+ "  \"service_charge\": 0,\r\n"
+				+ "  \"state_cd\": \""+state_cd+"\",\r\n"
+				+ "  \"state_header\": \"\",\r\n"
+				+ "  \"status\": \"\",\r\n"
+				+ "  \"tax_mode\": \"L\",\r\n"
+				+ "  \"vh_class\": 0,\r\n"
+				+ "  \"dupPermitdto\": {\r\n"
+				+ "    \"applNo\": \""+applno+"\",\r\n"
+				+ "    \"docList\": \"\",\r\n"
+				+ "    \"firDate\": \"2023-04-10T11:54:17.229Z\",\r\n"
+				+ "    \"firNumber\": \"ABC12\",\r\n"
+				+ "    \"offCd\": "+off_cd+",\r\n"
+				+ "    \"pmtNo\": \"\",\r\n"
+				+ "    \"policeStation\": \"string\",\r\n"
+				+ "    \"purCd\": 34,\r\n"
+				+ "    \"reason\": \"THEFT\",\r\n"
+				+ "    \"reasonTxt\": \"\",\r\n"
+				+ "    \"regnNo\": \""+regn_no+"\",\r\n"
+				+ "    \"stateCd\": \""+state_cd+"\",\r\n"
+				+ "    \"status\": \"\",\r\n"
+				+ "    \"updatedOn\": \"2023-04-10T11:54:17.229Z\"\r\n"
+				+ "  }\r\n"
+				+ "}";
+	}
 }

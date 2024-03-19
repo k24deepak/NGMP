@@ -15,6 +15,7 @@ public enum APIResources {
 	 GenerateOtp("vahancapi-common/api/generateOtp"),
 	 VerifyOtp("vahancapi-common/api/verifyOtp"),
 	 Getfeedetails("vahancapi-common/api/getfeedetails/{regn_no}/{stateCd}/{pur_cd}"),
+	 GetPermitFeeDetails("vahancapi-fees/api/getPermitFeeDetails"),
 	 Beforepayment("vahancapi-common/beforepayment"),
 	 Afterpayment("vahancapi-common/afterpayment/{paymentToken}"),
 	 Printreciept("vahancapi-common/printreciept/{state_cd}/{off_cd}/{transaction_no}/{reg_no}/{pur_cd}"),
@@ -25,12 +26,25 @@ public enum APIResources {
 	 Dms_Update("vahancapi-dms-client/dms/update/v1.0"),
 	 Fillvmonlineconfigurationdata("vahancapi-masterconfig/masterConfig/fillvmonlineconfigurationdata/{state_cd}"),
 	 Finalsubmitduprc("vahancapi-common/finalsubmitduprc"),
-	// Duplicate Permit API
 	
+	 // Duplicate Permit API
 	Permit_Document_List("vahancapi-permit/api/getPermitDocumentList/{regn_no}/{stateCd}"),
-	Dup_Permit_Draft("vahancapi-permit/api/duppermitdraft");
+	Dup_Permit_Draft("vahancapi-permit/api/duppermitdraft"),
 	
-	
+	//Hypothecation Addition
+	HPADraft("vahancapi-hpa/hpadraft"),
+	Form34("vahancapi-common/getForm34HPAReport/{off_cd}/{reg_no}/{applNO}/{pur_Cd}/{rcpt_no}/{state_cd}"),
+	Form36("vahancapi-common/getForm36HPAReport/{off_cd}/{reg_no}/{applNO}/{pur_Cd}/{rcpt_no}/{state_cd}"),
+
+	//Appointment Related
+	PaymentStatus("vahancapi-bookappointment/bookappointment/checkSucessfulPaymentorNot/{applNO}/{pur_Cd}"),
+	Get_Appt_Config_data("vahancapi-bookappointment/bookappointment/getapptconfigdata/{state_cd}"),
+	Get_Days("vahancapi-bookappointment/bookappointment/getdays"),
+	Get_User_Details_dobj("vahancapi-bookappointment/bookappointment/getuserdetailsdobjdata/{applNO}"),
+	Get_Avl_Data_for_book_appt("vahancapi-bookappointment/bookappointment/getavailabledataforbookappt"),
+	Validate_Calendar_Date("vahancapi-bookappointment/bookappointment/validatecalenderdate/{date}/{reg_no}/{state_cd}/{pur_Cd}"),
+	Save_appt("vahancapi-bookappointment/bookappointment/savebookapptdetails"),
+	Get_Appointment_Receipt("vahancapi-bookappointment/apptreceipt/getappointmentreceipt/{applNO}/{state_cd}/{pur_Cd}");
 	
 	
 	 private String resource;

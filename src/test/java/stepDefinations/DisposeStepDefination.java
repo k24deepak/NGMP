@@ -59,7 +59,7 @@ public class DisposeStepDefination extends Utils {
 	@Then("{string} in response body is {string}")
 	public void in_response_body_is(String keyValue, String Expectedvalue) {
 
-		//assertEquals(Expectedvalue,getJsonPath(response,keyValue));
+		assertEquals(Expectedvalue,getJsonPath(response,keyValue));
 		 off_cd =getJsonPath(response,"off_cd[0]");
 		 state_cd =getJsonPath(response,"state_cd[0]");
 		 transaction_no =getJsonPath(response,"transaction_no[0]");
@@ -84,5 +84,9 @@ public class DisposeStepDefination extends Utils {
 		System.out.println(regn_no);
 		res =given().spec(requestSpecification()).header("Content-Type", "application/json").body(data.disposeAPPL(off_cd, regn_no, state_cd, transaction_no));
 	}
-
+	@Given("use new demo api")
+	public void use_new_demo_api() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
 }

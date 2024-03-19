@@ -51,6 +51,7 @@ public class DuplicatePermit_StepDefination extends Utils{
 //		stateCode = (stateCd);
 //		VehicleNo = (regn_no);
 //		last5chasi_no = (chasi_no);
+//		String a =HPC_StepDefination.applNOHPA;
 //		
 //		res = given().spec(requestSpecification()).pathParam("regn_no", regn_no).pathParam("chasi_no", chasi_no).pathParam("stateCd", stateCd).pathParam("pur_cd", Purpose_cd);
 //		

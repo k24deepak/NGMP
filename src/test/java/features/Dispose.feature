@@ -9,7 +9,7 @@ Feature: Validation dispose API's
 	
 		Examples:
 				| VehicleNo  |   ApplicationNO   |  OTP  |
-				| MH12NX9086 | MH230109T0014122  | 1234  |
+				| ML05M6270  | ML240314M0743520  | 1234  |
 	
 	@GetDetailsOfAppl
 	Scenario: Verify DetailsDiposeAppl API
@@ -19,10 +19,13 @@ Feature: Validation dispose API's
 	
 	Examples:
 				  | 		ChassisNO  		|
-				  |	MAT464212HSC02540 |
+				  |	MA1ZC4GHKF1C31460 |
 
 	@DisposeAppl
 	Scenario: Verify DisposeAPPL API
 	Given DisposeApplication payload
 	When user calls "DisposeAPPL" API with "Post" http request
 	Then the API call got success with status code 200
+	
+	
+	
