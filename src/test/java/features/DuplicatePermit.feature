@@ -130,6 +130,26 @@ Examples:
 				
 	Scenario: Verify Finalsubmitduprc API for duplicate permit
   Given Use Finalsubmitduprc for duplicate permits
-	When user calls HPC "Finalsubmitduprc" API with "Post" http request
+	When user calls HPC "permitFinalSubmit" API with "Post" http request
 	Then the HPC API call got success with status code 200	
 
+#	Scenario: Verify CheckPaymentStatus API for HPA
+#  Given Use CheckPaymentStatus for HPA
+#	When user calls HPC "PaymentStatus" API with "Get" http request
+#	Then the HPC API call got success with status code 200
+	
+#	Scenario: Verify Get_Appt_Config_data API for HPA
+#  Given Use Get_Appt_Config_data for HPA
+#	When user calls HPC "Get_Appt_Config_data" API with "Get" http request
+#	Then the HPC API call got success with status code 200
+	
+#	Scenario: Verify Get_Days API for HPA
+#  Given Use Get_Days for HPA
+#	When user calls HPC "Get_Days" API with "Get" http request
+#	Then the HPC API call got success with status code 200
+	
+#	Scenario: Verify Get_User_Details_dobj API for HPA
+#  Given Use Get_User_Details_dobj for HPA
+#	When user calls HPC "Get_User_Details_dobj" API with "Get" http request
+#	Then the HPC API call got success with status code 200
+#	And "stateCd" in response body of Get_User_Details_dobj api is "GJ"

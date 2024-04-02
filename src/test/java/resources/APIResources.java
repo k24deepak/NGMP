@@ -30,6 +30,7 @@ public enum APIResources {
 	 // Duplicate Permit API
 	Permit_Document_List("vahancapi-permit/api/getPermitDocumentList/{regn_no}/{stateCd}"),
 	Dup_Permit_Draft("vahancapi-permit/api/duppermitdraft"),
+	permitFinalSubmit("/vahancapi-permit/api/finalsubmit/{applNo}/{stateCd}/{offCd}/{purCd}"),
 	
 	//Hypothecation Addition
 	HPADraft("vahancapi-hpa/hpadraft"),
@@ -44,7 +45,7 @@ public enum APIResources {
 	Get_Avl_Data_for_book_appt("vahancapi-bookappointment/bookappointment/getavailabledataforbookappt"),
 	Validate_Calendar_Date("vahancapi-bookappointment/bookappointment/validatecalenderdate/{date}/{reg_no}/{state_cd}/{pur_Cd}"),
 	Save_appt("vahancapi-bookappointment/bookappointment/savebookapptdetails"),
-	Get_Appointment_Receipt("vahancapi-bookappointment/apptreceipt/getappointmentreceipt/{applNO}/{state_cd}/{pur_Cd}");
+	Get_Appointment_Receipt("vahancapi-bookappointment/apptreceipt/getappointmentreceipt/{appt_id}/{state_cd}/{Off_cd}");
 	
 	
 	 private String resource;

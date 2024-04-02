@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import pojo.BeforePaymentHPA;
+import pojo.DataForBookAppt;
 import pojo.GenerateOTPPayload;
 import pojo.HPADraftAPPL;
 import pojo.hpaDto;
@@ -472,4 +473,53 @@ public class TestDataBuild {
 				+ "  }\r\n"
 				+ "}";
 	}
+	
+	public DataForBookAppt BookAppt(String applNo,String off_cd, String AvailDate, String regn_no, String pur_cd, String state_cd) {
+		DataForBookAppt h = new DataForBookAppt();
+		h.setAppl_no(applNo);
+		h.setBook_dt(AvailDate);
+		h.setOff_cd(off_cd);
+		h.setRegn_no(regn_no);
+		List<String> ss =new ArrayList<String>();
+		ss.add(pur_cd);
+		h.setSel_services(ss);
+		h.setState_cd(state_cd);
+		return h;
+	}
+	
+	public String SubmitAPPT(String applNo,String off_cd, String AvailDate, String regn_no, String slot_id, String state_cd) {
+		return "[\r\n"
+				+ " {\r\n"
+				+ "    \"appl_no\": \""+applNo+"\",\r\n"
+				+ "    \"appointment_dt\": \""+AvailDate+"\",\r\n"
+				+ "    \"appt_id\": \"\",\r\n"
+				+ "    \"book_status\": \"\",\r\n"
+				+ "    \"count_reschedule\": 1,\r\n"
+				+ "    \"counter_id\": \"UP32LH3732\",\r\n"
+				+ "    \"day_of_week\": 6,\r\n"
+				+ "    \"fit_officer\": \"\",\r\n"
+				+ "    \"mobile_no\": 0,\r\n"
+				+ "    \"new_appl_no\": \"\",\r\n"
+				+ "    \"new_appointment_dt\": \"\",\r\n"
+				+ "    \"off_cd\": "+off_cd+",\r\n"
+				+ "    \"old_appointment_dt\": \"\",\r\n"
+				+ "    \"op_date\": \"2023-08-24T09:44:48.960+00:00\",\r\n"
+				+ "    \"op_date_release\": \"2023-08-07T09:30:35.493Z\",\r\n"
+				+ "    \"op_dateas_date\": \"2023-08-07T09:30:35.493Z\",\r\n"
+				+ "    \"owner_name\": \"\",\r\n"
+				+ "    \"paymemt_status\": \"S\",\r\n"
+				+ "    \"regn_no\": \""+regn_no+"\",\r\n"
+				+ "    \"service_descr\": \"\",\r\n"
+				+ "    \"service_id\": 6,\r\n"
+				+ "    \"shift_day_of_week\": \"\",\r\n"
+				+ "    \"shift_slot_id\": \"\",\r\n"
+				+ "    \"slot_id\": "+slot_id+",\r\n"
+				+ "    \"state_cd\": \""+state_cd+"\",\r\n"
+				+ "    \"vch_catg\": \"LMV\",\r\n"
+				+ "    \"vh_class\": 59,\r\n"
+				+ "    \"vh_class_desc\": \"Motor Car\"\r\n"
+				+ "  }\r\n"
+				+ "]";
+	}
 }
+

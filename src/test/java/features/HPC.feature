@@ -8,7 +8,7 @@ Feature: Validation HPC API's
 	
 	Examples:
 				| VehNo		   |  chassis No |	State_Cd |  Pur_cd |
-				| GJ23BS5878 | 		04888		 |	  GJ 		 |		8		 |
+				| GJ23BS5825 | 		24201		 |	  GJ 		 |		8		 |
 				
  Scenario: Verify getstatecdandoffcd of DP API
   Given Get details state and off code details using DP api

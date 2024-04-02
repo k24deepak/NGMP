@@ -1,4 +1,4 @@
-Feature: Validation HPC API's
+Feature: Validation HPA API's
 
 	Scenario: verify regandchassisno validation api
   Given Use duplicat permit using "<VehNo>" "<chassis No>" "<State_Cd>" "<Pur_cd>"
@@ -8,7 +8,7 @@ Feature: Validation HPC API's
 	
 	Examples:
 				| VehNo		   |  chassis No |	State_Cd |  Pur_cd |
-				| 24BH6754A  | 		59316		 |	  UP 		 |		6		 |
+				| UP32FN7383 | 		11097		 |	  UP 		 |		6		 |
 				
  Scenario: Verify getstatecdandoffcd of DP API
   Given Get details state and off code details using DP api
@@ -118,8 +118,43 @@ Examples:
 	
 	Scenario: Verify CheckPaymentStatus API for HPA
   Given Use CheckPaymentStatus for HPA
-	When user calls HPC "PaymentStatus" API with "Post" http request
+	When user calls HPC "PaymentStatus" API with "Get" http request
 	Then the HPC API call got success with status code 200
+	
+	Scenario: Verify Get_Appt_Config_data API for HPA
+  Given Use Get_Appt_Config_data for HPA
+	When user calls HPC "Get_Appt_Config_data" API with "Get" http request
+	Then the HPC API call got success with status code 200
+	
+	Scenario: Verify Get_Days API for HPA
+  Given Use Get_Days for HPA
+	When user calls HPC "Get_Days" API with "Get" http request
+	Then the HPC API call got success with status code 200
+	
+	Scenario: Verify Get_User_Details_dobj API for HPA
+  Given Use Get_User_Details_dobj for HPA
+	When user calls HPC "Get_User_Details_dobj" API with "Get" http request
+	Then the HPC API call got success with status code 200
+	And "stateCd" in response body of Get_User_Details_dobj api is "GJ"
+	
+	Scenario: Verify Get_Avl_Data_for_book_appt API for HPA
+  Given Use Get_Avl_Data_for_book_appt for HPA
+	When user calls HPC "Get_Avl_Data_for_book_appt" API with "Post" http request
+	Then the HPC API call got success with status code 200
+	And "stateCd" in response body of Get_Avl_Data_for_book_appt api is "GJ"
 
-
-
+	Scenario: Verify Validate_Calendar_Date API for HPA
+  Given Use Validate_Calendar_Date for HPA
+	When user calls HPC "Validate_Calendar_Date" API with "Get" http request
+	Then the HPC API call got success with status code 200
+	
+	Scenario: Verify Save_appt API for HPA
+  Given Use Save_appt for HPA
+	When user calls HPC "Save_appt" API with "Post" http request
+	Then the HPC API call got success with status code 200
+	And "stateCd" in response body of Save_appt api is "GJ"
+	
+	Scenario: Verify Get_Appointment_Receipt API for HPA
+  Given Use Get_Appointment_Receipt for HPA
+	When user calls HPC "Get_Appointment_Receipt" API with "Get" http request
+	Then the HPC API call got success with status code 200

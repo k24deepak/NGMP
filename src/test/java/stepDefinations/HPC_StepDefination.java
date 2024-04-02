@@ -14,10 +14,8 @@ import resources.Utils;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 import java.io.IOException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 public class HPC_StepDefination extends Utils{
@@ -69,6 +67,9 @@ public class HPC_StepDefination extends Utils{
 	static String cat_idVINP;
 	static String sub_cat_idVINP;
 	static String objectidAFFDQ;
+	static String AvailDate;
+	static String Slot_id;
+	static String appt_id;
 	
 	@Given("Use duplicat permit using {string} {string} {string} {string}")
 	public void use_duplicat_permit_using(String regn_no, String chasi_no, String stateCd, String Purpose_cd) throws IOException {
@@ -382,7 +383,7 @@ public class HPC_StepDefination extends Utils{
 
 	@Given("Use Finalsubmitduprc for duplicate permits")
 	public void use_finalsubmitduprc_for_duplicate_permits() throws IOException {
-		res = given().spec(requestSpecification()).header("Content-Type", "application/json").body(data.finalsubmitDuplicatePermit(applNO, off_cd, last5chasi_no, VehicleNo, stateCode));
+		res = given().spec(requestSpecification()).pathParam("applNo", applNO).pathParam("stateCd", stateCode).pathParam("offCd", off_cd).pathParam("purCd", Pur_cd);
 	}
 	//Till FinalSubmit of Duplicate Permit
 	
@@ -518,8 +519,55 @@ public class HPC_StepDefination extends Utils{
 	}
 	
 	@Given("Use CheckPaymentStatus for HPA")
-	public void use_check_payment_status_for_hpa() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void use_check_payment_status_for_hpa() throws IOException {
+		res = given().spec(requestSpecification()).pathParam("applNO", applNOHPA).pathParam("pur_Cd", Pur_cd);
+	}
+	
+	@Given("Use Get_Appt_Config_data for HPA")
+	public void use_get_appt_config_data_for_hpa() throws IOException {
+		res = given().spec(requestSpecification()).pathParam("state_cd", stateCode);
+	}
+	
+	@Given("Use Get_Days for HPA")
+	public void use_get_days_for_hpa() throws IOException {
+		res = given().spec(requestSpecification());
+	}
+	
+	@Given("Use Get_User_Details_dobj for HPA")
+	public void use_get_user_details_dobj_for_hpa() throws IOException {
+		res = given().spec(requestSpecification()).pathParam("applNO", applNOHPA);
+	}
+	@Then("{string} in response body of Get_User_Details_dobj api is {string}")
+	public void in_response_body_of_get_user_details_dobj_api_is(String string, String string2) {
+		AvailDate = getJsonPath(response, "availableDates[0]");
+		System.out.println(AvailDate);
+	}
+	
+	@Given("Use Get_Avl_Data_for_book_appt for HPA")
+	public void use_get_avl_data_for_book_appt_for_hpa() throws IOException {
+		res = given().spec(requestSpecification()).header("Content-Type", "application/json").body(data.BookAppt(applNOHPA, off_cd, AvailDate, VehicleNo, Pur_cd, stateCode));
+	}
+	@Then("{string} in response body of Get_Avl_Data_for_book_appt api is {string}")
+	public void in_response_body_of_get_avl_data_for_book_appt_api_is(String string, String string2) {
+		Slot_id = getJsonPath(response, "slot_id[0]");
+	}
+	
+	@Given("Use Validate_Calendar_Date for HPA")
+	public void use_validate_calendar_date_for_hpa() throws IOException {
+		res = given().spec(requestSpecification()).pathParam("date", AvailDate).pathParam("reg_no", VehicleNo).pathParam("state_cd", stateCode).pathParam("pur_Cd", Pur_cd);
+	}
+	
+	@Given("Use Save_appt for HPA")
+	public void use_save_appt_for_hpa() throws IOException {
+		res = given().spec(requestSpecification()).header("Content-Type", "application/json").body(data.SubmitAPPT(applNOHPA, off_cd, AvailDate, VehicleNo, Slot_id, stateCode));
+	}
+	@Then("{string} in response body of Save_appt api is {string}")
+	public void in_response_body_of_save_appt_api_is(String string, String string2) {
+		appt_id = getJsonPath(response, "value");
+	}
+	
+	@Given("Use Get_Appointment_Receipt for HPA")
+	public void use_get_appointment_receipt_for_hpa() throws IOException {
+		res = given().spec(requestSpecification()).pathParam("appt_id", appt_id).pathParam("state_cd", stateCode).pathParam("Off_cd", off_cd);
 	}
 }
